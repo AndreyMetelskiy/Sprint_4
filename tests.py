@@ -41,7 +41,7 @@ class TestBooksCollector:
         genre = 'Мультфильмы'
         collector.add_new_book(name)
         collector.set_book_genre(name, genre)
-        assert collector.books_genre.get(name) == 'Мультфильмы'
+        assert collector.get_book_genre(name) == 'Мультфильмы'
         
     # Проверка метода get_books_with_specific_genre: фильтрация коллекции по конкретному жанру
     @pytest.mark.parametrize('books_to_add, specific_genre, expected_list', [
